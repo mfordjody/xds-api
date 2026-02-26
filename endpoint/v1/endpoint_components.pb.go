@@ -7,8 +7,7 @@
 package endpointv1
 
 import (
-	v1 "github.com/dubbo-kubernetes/core/v1"
-	v11 "github.com/dubbo-kubernetes/xds-api/core/v1"
+	v1 "github.com/dubbo-kubernetes/xds-api/core/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
@@ -160,7 +159,7 @@ func (*LbEndpoint_EndpointName) isLbEndpoint_HostIdentifier() {}
 
 type LocalityLbEndpoints struct {
 	state               protoimpl.MessageState  `protogen:"open.v1"`
-	Locality            *v11.Locality           `protobuf:"bytes,1,opt,name=locality,proto3" json:"locality,omitempty"`
+	Locality            *v1.Locality            `protobuf:"bytes,1,opt,name=locality,proto3" json:"locality,omitempty"`
 	LbEndpoints         []*LbEndpoint           `protobuf:"bytes,2,rep,name=lb_endpoints,json=lbEndpoints,proto3" json:"lb_endpoints,omitempty"`
 	LoadBalancingWeight *wrapperspb.UInt32Value `protobuf:"bytes,3,opt,name=load_balancing_weight,json=loadBalancingWeight,proto3" json:"load_balancing_weight,omitempty"`
 	Priority            uint32                  `protobuf:"varint,5,opt,name=priority,proto3" json:"priority,omitempty"`
@@ -199,7 +198,7 @@ func (*LocalityLbEndpoints) Descriptor() ([]byte, []int) {
 	return file_endpoint_v1_endpoint_components_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *LocalityLbEndpoints) GetLocality() *v11.Locality {
+func (x *LocalityLbEndpoints) GetLocality() *v1.Locality {
 	if x != nil {
 		return x.Locality
 	}
@@ -320,7 +319,7 @@ var file_endpoint_v1_endpoint_components_proto_goTypes = []any{
 	(*LocalityLbEndpoints_LbEndpointList)(nil), // 3: endpoint.v1.LocalityLbEndpoints.LbEndpointList
 	(*v1.Address)(nil),                         // 4: core.v1.Address
 	(*wrapperspb.UInt32Value)(nil),             // 5: google.protobuf.UInt32Value
-	(*v11.Locality)(nil),                       // 6: core.v1.Locality
+	(*v1.Locality)(nil),                        // 6: core.v1.Locality
 }
 var file_endpoint_v1_endpoint_components_proto_depIdxs = []int32{
 	4, // 0: endpoint.v1.Endpoint.address:type_name -> core.v1.Address

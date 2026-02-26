@@ -63,7 +63,7 @@ var File_core_v1_address_proto protoreflect.FileDescriptor
 const file_core_v1_address_proto_rawDesc = "" +
 	"\n" +
 	"\x15core/v1/address.proto\x12\acore.v1\x1a\x1egoogle/protobuf/wrappers.proto\"\t\n" +
-	"\aAddressB,Z*github.com/dubbo-kubernetes/core/v1;corev1b\x06proto3"
+	"\aAddressB4Z2github.com/dubbo-kubernetes/xds-api/core/v1;corev1b\x06proto3"
 
 var (
 	file_core_v1_address_proto_rawDescOnce sync.Once
